@@ -1,0 +1,2 @@
+# core
+first django project
