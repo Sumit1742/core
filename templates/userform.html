@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+ {% block content %}
+    <!-- Start about Area--> 
+        <section class="feature-area section-gap" id="secvice"> 
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content pb-60 col-lg-8">
+                    <div class="title text-center"> 
+                        <h1 class="mb-10">User Form</h1> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12" action="{% url "submitform" %}">
+                <form method="post">
+                    {% csrf_token %}
+                    {{form}}
+                    {% comment %} <div>
+                        <label for="">Value1</label>
+                        <input type="text" name="num1" value="{{n1}}" class="form-control"/>
+                    </div>
+                    <div>
+                        <label for="">Value2</label>
+                        <input type="text" name="num2" value="{{n2}}" class="form-control"/>
+                    </div> {% endcomment %}
+                    <div class="pt-4 ">
+                        <button type="submit">Save</button>
+                    </div>
+                    output
+                    <input type="text" value="{{output}}" />
+                </form>
+            </div> 
+        </div>
+    <section>
+ {% endblock  %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+ {% block content %}
+    <!-- Start about Area--> 
+        <section class="feature-area section-gap" id="secvice"> 
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content pb-60 col-lg-8">
+                    <div class="title text-center"> 
+                        <h1 class="mb-100">evenodd</h1> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12" action="{% url "evenodd" %}">
+                <form method="post">
+                    {% csrf_token %}
+                    {{form}}
+                    <div>
+                        <label for="">Value1</label>
+                        <input type="text" name="num1"  class="form-control"/>
+                    </div>
+                        <button type="submit">even|odd</button>
+                    <div class="pt-4 ">   
+                        <label>output</label>
+                       <input type="text"  value="{{c}}" class="form-control"/>
+                    </div>
+                </form>
+            </div> 
+        </div>
+    <section>
+ {% endblock  %}
